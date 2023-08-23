@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="{{ direction }}" lang="{{ lang }}">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ title }}</title>
+    {% if description %}
+        <meta name="description" content="{{ description }}"/>
+    {% endif %}
+    {% if keywords %}
+        <meta name="keywords" content="{{ keywords }}"/>
+    {% endif %}
+    {% for style in styles %}
+        <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}"/>
+    {% endfor %}
+    <link rel="stylesheet" href="catalog/view/theme/lamanteam/stylesheet/styles.min.css"/>
+    <script src="catalog/view/javascript/lamanteam/jquery-1.8.3.min.js"></script>
+    <script src="catalog/view/javascript/lamanteam/common.min.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="header__inner">
+        <a href="#">
+            <img class="header__logo" src="{{ logo }}" alt="Auto Company 7"/>
+        </a>
+
+        <div class="header__info">{{ name }}</div>
+    </div>
+</header>
